@@ -1,0 +1,8 @@
+[package]
+name = "ch02-audit-trail-exercise"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio ={ version = "1", features = ["full"]}
+futures-util = "0.3"
