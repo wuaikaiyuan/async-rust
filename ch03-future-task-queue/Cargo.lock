@@ -33,6 +33,7 @@ dependencies = [
  "async-task",
  "flume",
  "futures-lite",
+ "log",
 ]
 
 [[package]]

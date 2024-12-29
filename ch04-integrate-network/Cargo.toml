@@ -1,0 +1,47 @@
+[package]
+name = "ch04-integrate-network"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 快速和流行的 HTTP 实现，client 允许发送 HTTP 请求，runtime 允许兼容自定义运行时
+# hyper = {version = "0.14.26", features = ["http1", "http2", "client", "runtime"]}
+hyper = {version = "1.5.1", features = ["http1", "http2", "client", "server"]}
+hyper-util = {version = "0.1.10", features = ["client", "client-legacy", "http1", "http2"]}
+# 轻量级运行时，特别适合那些低开销轻型任务
+smol = "1.3.0"
+anyhow = "1.0.70"
+# 提供异步传输的 TLS 支持
+async-native-tls = "0.5.0"
+# 提供处理 HTTP 的请求和响应的类型
+http = "0.2.9"
+tokio = { version = "1.14.0", features = ["full"] }
+rustom_runtime = { path = "../ch03-future-task-queue", package = "ch03-future-task-queue" }
+tower-service = "0.3.3"
+bytes = "1.0"
+http-body-util = "0.1"
+
+mio ={ version = "1.0.2", features = ["net", "os-poll"]}
+
+pyo3 = { version = "0.23.3", features = ["auto-initialize"] }
+pyo3-ffi = "0.23.3"
+
+# 模型加载：翻译
+rust-bert = "0.20"
+
+# 读取环境变量
+dotenv = "0.15.0"
+serde = { version = "1.0.216", features = ["derive", "serialize", "deserialize"] }
+serde_json = "1.0.79"
+toml = "0.8.19"
+
+
+# twitter
+reqwest = "0.12.9"
+scraper = "0.22.0"
+base64 = "0.22.1"
+chrono = "0.4.39"
+url = "2.5.4"
+futures = "0.3.31"
+rand = "0.8.5"
+log = "0.4.22"
